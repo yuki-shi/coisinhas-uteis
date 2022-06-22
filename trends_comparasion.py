@@ -2,6 +2,10 @@ import pandas as pd
 from pytrends.request import TrendReq
 import datetime as dt
 
+#--------------------------
+  # kw_list = Lista de KWs a serem buscadas no Trends
+#--------------------------
+
 def trends_table(kw_list): 
   pytrends = TrendReq(hl='pt-BR', tz=180)
 
