@@ -27,11 +27,10 @@ def getLinks(url):
 def scrape(linkList):
 
 	titles = []
-
+	
+	# usando tqdm pois sou ansiosa
 	with tqdm(total = len(linkList)) as loop:
-		
 		for link in linkList:
-			
 			r = requests.get(link)
 			url = r.text.encode('utf-8')
 			soup = BeautifulSoup(url, 'html.parser')
